@@ -1,6 +1,25 @@
 from tkinter import *
 from tkinter.filedialog import *
 
+def new_file():
+    text_area.delete(1.0, END)
+
+def save_file():
+    f=asksaveasfile(mode = "w", defaultextension)=".txt", filetypes=[('Text files', '.txt')]
+    text_save = str(text_area.get(1.0, END))
+    f.write(text_save)
+    f.close()
+
+def maker():
+    help_view = Toplevel(window)
+    help_view.geometry("300*50")    
+    help_view.title("만든이")
+    lb = Label(help_view, text = "강윤호가 만든 메모자입니다.")
+    lb.pack()
+
+
+    
+                                                                   
 window = Tk()
 window.title("notepad")
 window.geometry("400*400")
