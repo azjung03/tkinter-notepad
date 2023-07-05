@@ -18,7 +18,11 @@ menu_2 = Menu(menu, tearoff=0)
 menu_2.add_command(label="만든이")
 menu.add_cascade(label="만든이", menu=menu_2)
 
+text_area = Text(window)
+window.gird_rowconfigure(0, weight=1)
+text_area.grid(sticky = N + E + s + w)
+
+
 window.config(menu=menu)
 
 window.mainloop()
-
